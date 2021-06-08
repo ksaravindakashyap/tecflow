@@ -1,0 +1,41 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>signup</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/accounts.css' %}" >
+</head>
+<body>
+    <header>
+        <a href="index.html" class="header-branch">TECHFLOW</a>
+        <nav>
+            <ul>
+                <li><a href="/">HOME</a></li> 
+            </ul>         
+        </nav>
+    </header>
+    <div class="signupstyle">
+        <form action="\accounts\signup\" method="POST">
+            {% csrf_token %}
+            <div class="formstyle">
+                <input class="box" type="text" name="first_name" placeholder="FIRST NAME"><br>
+                <input class="box" type="text" name="last_name" placeholder="LAST NAME"><br>
+                <input class="box" type="text" name="username" placeholder="USERNAME"><br>
+                <input class="box" type="email" name="email" placeholder="EMAILID"><br>
+                <input class="box" type="password" name="password1" placeholder="PASSWORD"><br>
+                <input class="box" type="password" name="password2" placeholder="CONFIRM PASSWORD"><br>
+                <input class="button" type="submit">
+                <div class="invalid-signup">
+                    {% for message in messages %}
+                    <h4>{{message}}</h4>
+                    {% endfor %}
+                </div>
+            </div>
+        </form>
+    </div>
+    
+</body>
+</html>

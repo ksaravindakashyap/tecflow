@@ -1,0 +1,57 @@
+<!-- create the quiz here -->
+{% load static %} 
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quizpanel</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/quizpanel.css' %}" >
+
+</head>
+<body>    
+        <header>
+            <a href="#" class="header-branch">TECHFLOW</a>
+            <nav>
+                <ul>
+                    <li><a href="/">HOME</a></li>
+                    <li><a class="panelportfolioweb"  href="/portfolio">Portfolio</a></li>
+                    {% if user.is_authenticated %}
+                    <li>Hello, {{user.first_name}}</li>				
+                    <li><a href="/accounts/logout">logout</a></li>
+                    {% else %}	
+                    <li><a href="/accounts/signup">signup</a></li>	
+                    <li><a href="/accounts/login">login</a></li>
+                    {% endif %}
+                    
+                </ul>
+                <a href="/accounts/signup" class="webonlyversion">signup</a>          
+            </nav>
+                <h1 class="welcome">Welcome to quiz page</h1>
+        </header>
+        <main>
+        <div class="classone">
+           <label class="level" for="Level of difficulty">CHOOSE THE LANGUAGE</label>
+                <select name="YOUR EXPERIENCE " id="Level of difficulty">       
+                    <option class="boxbutton" value="none" selected="selected">select option</option>                        
+                    <option value="/beginner">JS</option>
+                </select>
+        </div>
+        </main>
+    
+        
+    <div class="button"> <!--here the class and div are used for further use of css-->
+        <script> type="text/javascript"
+            var urlmenu = document.getElementById("Level of difficulty");
+            urlmenu.onclick = function (){
+                var userchoice = this.options[this.selectedIndex];
+                if (userchoice.value != "none"){
+                    window.open(userchoice.value,"_self", "level of difficulty"); 
+                }
+            }
+        </script>
+    </div>
+    
+</body>
+</html>

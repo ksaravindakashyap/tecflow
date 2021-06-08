@@ -1,0 +1,365 @@
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+    margin:0;
+    padding:0;
+    border:0;
+    outline:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+}
+
+body {
+    line-height:1;
+}
+
+article,aside,details,figcaption,figure,
+footer,header,hgroup,menu,nav,section {
+    display:block;
+}
+
+nav ul {
+    list-style:none;
+}
+
+blockquote, q {
+    quotes:none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content:'';
+    content:none;
+}
+
+a {
+    margin:0;
+    padding:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+}
+
+/* change colours to suit your needs */
+ins {
+    background-color:#ff9;
+    color:#000;
+    text-decoration:none;
+}
+
+/* change colours to suit your needs */
+mark {
+    background-color:#ff9;
+    color:#000;
+    font-style:italic;
+    font-weight:bold;
+}
+
+del {
+    text-decoration: line-through;
+}
+
+abbr[title], dfn[title] {
+    border-bottom:1px dotted;
+    cursor:help;
+}
+
+table {
+    border-collapse:collapse;
+    border-spacing:0;
+}
+
+/* change border colour to suit your needs */
+hr {
+    display:block;
+    height:1px;
+    border:0;
+    border-top:1px solid #cccccc;
+    margin:1em 0;
+    padding:0;
+}
+
+input, select {
+    vertical-align:middle;
+}
+
+
+
+/* MYCODE */
+
+@import url('https://fonts.googleapis.com/css2?family=Itim&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Castoro&display=swap');
+* {
+    text-decoration: none;
+}
+
+
+body{
+    background: url('homepageMobV1.png');
+    background-attachment: scroll;
+    background-size: 100% auto;
+    height: 736px;
+    background-repeat: no-repeat;
+}
+
+
+div {
+    max-width: 400px;
+    margin: 8em auto;
+    padding: 5em;
+    min-height: 600px;
+  }
+
+header {
+    color: turquoise;
+    height: 100px;
+    width: 100%;
+}
+
+header .header-branch{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
+    font-weight: 900;
+    color: turquoise;
+    text-transform: uppercase;
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    padding: 20px 0;
+}
+
+
+header nav ul {
+    margin : 0 auto;
+    width: fit-content;
+    display: block;
+    text-transform: uppercase;
+
+}
+
+header nav ul li {
+    float:left;
+    padding: 0 15px;
+    font-weight: bold;
+    color: turquoise; 
+}
+
+header nav ul li a{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 15px;
+    color: turquoise;
+    
+}
+
+header .webonlyversion {
+    display: none;
+}
+
+.classone {
+    font-family: 'Castoro', serif;
+    font-size: 10px;
+    padding: 30px 90px;
+    margin: 50px 45px 0px 30px;  /* T R B L */
+    border-radius: 10px;
+    background-color: ivory;
+    text-align: center;
+    overflow: hidden;
+}
+
+.level{
+    line-height: 15px;
+
+}
+
+.panelportfolioweb{
+    display: block;
+}
+
+.welcome{
+    padding: 40px 0px 0px 90px; /*in the order T R B L*/
+    text-transform: uppercase;
+}
+
+
+@media only screen and (min-width: 1000px) {
+    header .header-branch{
+        margin: 30px 0px;
+        text-align: left;
+        padding: 0px 20px 0px 20px;
+        line-height: 40px;
+        border-right: 3px solid white;
+        float: left;
+    }
+
+
+    header nav ul {
+        margin : 20px 0px 0px 20px;
+        float: left;
+    }
+    
+ 
+    header nav ul li a{
+        line-height: 60px;
+    }
+
+    header .webonlyversion {
+        display: block;
+        font-family: 'Times New Roman', Times, serif;
+        color: turquoise;
+        float: right;
+        padding: 0 20px;
+        line-height: 30px;
+        margin-right: 40px;
+        text-transform: uppercase;
+        border: 2px solid white;
+        margin-top: 30px;
+    }
+    .panelportfolioweb{
+        display: block;
+    }
+
+    .welcome{
+        padding: 90px 0px 0px 450px; /*in the order T R B L*/
+        font-size: 30px;
+        text-transform: uppercase;
+    }
+}
+
+ /* THE BANNER STYLE */
+.index-banner {
+    width: 100%;
+    height: (100vh - 100px);
+    color: lightcyan;
+} 
+
+.index-banner h1 {
+    padding: 30px 80px;
+}
+
+.index-banner h2 {
+    padding-top: 15px;
+    padding-left: 30px;
+}
+
+.index-banner p {
+    padding-top: 30px;
+    padding-left: 30px;
+}
+
+/*YOU CAN ADD A RESPONSE FOR INDEX IF YOU HAVE A BANNER*/
+
+/* FOOTER */
+footer {
+    margin-top: 20px;
+    padding: 80px 0px 0px 0px;
+    width: calc(100% - 30px);
+    overflow: hidden;
+}
+
+footer ul {
+    width: fit-content;
+    float: left;
+    padding: 670px 0px 0px 30px;
+}
+
+footer ul li {
+    display: block;
+    list-style: none;
+    
+}
+
+footer ul b {
+    font-style: italic;
+    font-family: fantasy;
+}
+
+footer ul li a {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    padding: 40px 10px;
+    line-height: 35px;
+    color: white;
+
+}
+
+.footer-sm {
+    width: 50px;
+    float: right;
+}
+
+.footer-sm img {
+    width: 100%;
+    margin-bottom: 15px;
+}
+footer ul li a{
+    padding: 10px 25px 0px 0px;
+    overflow: hidden;
+}
+.main-link-web{
+    padding: 395px 50px 50px 0px;
+    overflow: hidden;
+    color: black;
+    
+}
+
+.main-link-mob{
+    padding: 395px 50px 0px 30px;
+    overflow: hidden;
+    color: black;
+}
+
+@media only screen and (min-width:1000px){
+    body{
+    background: url('homepageV2ff.png');
+    background-attachment: scroll;
+    background-size: 100% auto;
+    height: 1000px;
+    background-repeat: no-repeat;
+}
+div {
+    max-width: 400px;
+    margin: 8em auto;
+    padding: 5em;
+    min-height: 600px;
+  }
+
+    .main-link-web{
+        display: block;
+        padding: 885px 0px 0px 180px;
+    }
+
+    .main-link-web b{
+        color: white;
+    }
+
+    footer ul {
+        line-height: 30px;
+        margin-top: 10px;
+        padding: 900px 0px 0px 40px;
+    }
+
+    footer ul li a{
+        padding: 10px 0px 0px 0px;
+    }
+
+    .main-link-mob{
+        padding: 885px 50px 0px 39px;
+        overflow: hidden;
+        font-size: 15px;
+    }
+    
+
+
+}
+
+
+

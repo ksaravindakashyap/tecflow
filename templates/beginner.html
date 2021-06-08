@@ -1,0 +1,96 @@
+
+{% load static %}
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beginner</title>
+<style>
+    *{
+        background-color: rgb(27, 27, 27);
+    }
+.beginnerheader {
+    text-align: center;
+    padding: 30px 0px;
+    color:whitesmoke;
+        
+}
+.questions {
+    scroll-behavior: smooth;
+    padding: 0px 30px 10px 70px;
+    line-height: 20px;
+    color: white;
+}
+
+#btn1{
+    color: white;
+}
+</style> 
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> <!--to add latest version of cdn jquery-->
+ <script> /*to get answer in the click*/ 
+     $(document).ready(function(){
+        $("#btn1").click(function(){
+                $(".ans").show();
+                $(".ans").attr("disabled",true);
+        });
+    });
+    function getanswer()
+    {
+        document.getElementById("useranswer").innerHTML = "";
+        var e = document.getElementsByTagName('input');
+        for(i = 0; i< e.length ; i++)
+        {
+            if(e[i].type == "radio")
+            {
+                if(e[i].checked)
+                {
+                    document.getElementById("useranswer").innerHTML += "Q" + e[i].name + "Answer you selected is :" + e[i].value+ "<br/>";
+                }
+            }
+        }
+    }
+</script> 
+ 
+</head>
+<body>
+    <header class="beginnerheader">
+        <h1>JavaScript Quiz</h1>
+    </header>   
+    <main class="questions">
+        {% for Result in QUIZFORM %}
+            <table>
+                <br>
+                <tr>
+                    <td>{{Result.id}} ) {{Result.questions}}</td>
+                </tr>
+                <tr>
+                    <td><input type="radio" id="choice1" name="{{Result.id}}" class="ans" value="{{Result.choice1}}">{{Result.choice1}}</td>
+                </tr>
+                <tr>
+                    <td><input type="radio" id="choice1" name="{{Result.id}}" class="ans" value="{{Result.choice2}}">{{Result.choice2}}</td>
+                </tr>
+                <tr>
+                    <td><input type="radio" id="choice1" name="{{Result.id}}" class="ans" value="{{Result.choice3}}">{{Result.choice3}}</td>
+                </tr>
+                <tr>
+                    <td><input type="radio" id="choice1" name="{{Result.id}}" class="ans" value="{{Result.choice4}}">{{Result.choice4}}</td>
+                </tr>
+                <tr>
+                    <td><label id="correctanswer" class="ans" value="{{Result.correctanswer}}" style="display: none; color:green;"><b>{{Result.correctanswer}}</b></label></td>
+                </tr>
+                <hr/>
+            </table>
+            {% endfor %}
+                <button type="submit" id="btn1" onclick="getanswer();"> submitanswer </button><br>
+                <b id="useranswer"></b>
+                <hr/>          
+
+    </main>
+
+</body>
+
+</html>

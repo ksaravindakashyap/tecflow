@@ -1,0 +1,51 @@
+{% load static  %} 
+<!-- link all the sub pages, 
+2. further  include  a link to the blog page from here
+3.Also to the activity checker
+4. To my portfolio or keep portfolio as main page and give link to all others -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+    <title>TECH</title>
+</head>
+<body>
+    <header>
+        <a href="#" class="header-branch">TECHFLOW</a>
+        <nav>
+            <ul>
+                <li><a href="/">HOME</a></li>
+                <li><a href="/portfolio">Portfolio</a></li>
+                {% if user.is_authenticated %}
+                <li>Hello, {{user.first_name}}</li>				
+                <li><a href="accounts/logout">logout</a></li>
+                {% else %}	
+                <li><a href="accounts/login">login</a></li>
+                {% endif %}
+                <li><a href="/quizpanel">Quiz</a></li>
+            </ul>
+            <a href="accounts/signup" class="webonlyversion">signup</a>
+             
+        </nav>
+    </header>
+    <main>
+    </main>
+    <footer>
+        <ul class="main-link-mob">
+            <li><a href="/aboutus">ABOUT US</a></li>
+            <li><a href="#">BLOG</a></li>
+            <li><a href="#">DAILY LETTER</a></li>
+        </ul>
+        <ul class="main-link-web">
+            <li><a href="https://github.com/ksaravindakashyap">Github</a></li>
+            <li><a href="">Instagram</a></li>
+            <li><a href="https://www.linkedin.com/in/k-s-aravinda-kashyap-08802a202/">Linkedin</a></li>
+        </ul>
+      
+    </footer>
+        
+</body>
+</html>

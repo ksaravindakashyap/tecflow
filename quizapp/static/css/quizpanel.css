@@ -1,0 +1,273 @@
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+    margin:0;
+    padding:0;
+    border:0;
+    outline:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+}
+
+body {
+    line-height:1;
+}
+
+article,aside,details,figcaption,figure,
+footer,header,hgroup,menu,nav,section {
+    display:block;
+}
+
+nav ul {
+    list-style:none;
+}
+
+blockquote, q {
+    quotes:none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content:'';
+    content:none;
+}
+
+a {
+    margin:0;
+    padding:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+}
+
+/* change colours to suit your needs */
+ins {
+    background-color:#ff9;
+    color:#000;
+    text-decoration:none;
+}
+
+/* change colours to suit your needs */
+mark {
+    background-color:#ff9;
+    color:#000;
+    font-style:italic;
+    font-weight:bold;
+}
+
+del {
+    text-decoration: line-through;
+}
+
+abbr[title], dfn[title] {
+    border-bottom:1px dotted;
+    cursor:help;
+}
+
+table {
+    border-collapse:collapse;
+    border-spacing:0;
+}
+
+/* change border colour to suit your needs */
+hr {
+    display:block;
+    height:1px;
+    border:0;
+    border-top:1px solid #cccccc;
+    margin:1em 0;
+    padding:0;
+}
+
+input, select {
+    vertical-align:middle;
+}
+
+/* 
+MYCODE */
+@import url('https://fonts.googleapis.com/css2?family=Itim&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Castoro&display=swap');
+
+body{
+    background-color: rgb(27, 27, 27);
+    background-attachment: scroll;
+    background-size: 100% auto;
+    height: 736px;
+    background-repeat: no-repeat;
+}
+
+
+div {
+    max-width: 400px;
+    margin: 8em auto;
+    padding: 5em;
+    min-height: 100px;
+  }
+
+header {
+    color: turquoise;
+    height: 100px;
+    width: 100%;
+}
+
+header .header-branch{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
+    font-weight: 900;
+    color: turquoise;
+    text-transform: uppercase;
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    padding: 20px 0;
+}
+
+
+header nav ul {
+    margin : 0 auto;
+    width: fit-content;
+    display: block;
+    text-transform: uppercase;
+
+}
+
+header nav ul li {
+
+    float:left;
+    padding: 0 15px;
+    font-weight: bold;
+    color: turquoise;
+
+    
+}
+
+header nav ul li a{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 15px;
+    color: turquoise;
+    
+}
+
+header .webonlyversion {
+    display: none;
+}
+
+
+.classone {
+    font-family: 'Castoro', serif;
+    font-size: 10px;
+    padding: 30px 90px;
+    margin: 50px 45px 0px 30px;  /* T R B L */
+    border-radius: 10px;
+    background-color: ivory;
+    text-align: center;
+    overflow: hidden;
+}
+
+.level{
+    line-height: 15px;
+}
+
+.panelportfolioweb{
+    display: block;
+}
+
+.welcome{
+    padding: 40px 0px 0px 90px; /*in the order T R B L*/
+    text-transform: uppercase;
+}
+
+
+
+@media only screen and (min-width: 1000px) {
+    body{
+        background-color: rgb(27, 27, 27);
+        background-attachment:scroll;
+        background-size: 100% auto;
+        height: 1000px;
+        background-repeat: no-repeat;
+    }
+  
+    header .header-branch{
+        margin: 30px 0px;
+        text-align: left;
+        padding: 0px 20px 0px 20px;
+        line-height: 40px;
+        border-right: 3px solid white;
+        float: left;
+    }
+
+
+    header nav ul {
+        margin : 20px 0px 0px 20px;
+        float: left;
+    }
+    
+ 
+    header nav ul li a{
+        line-height: 60px;
+    }
+
+    header .webonlyversion {
+        display: block;
+        font-family: 'Times New Roman', Times, serif;
+        color: turquoise;
+        float: right;
+        padding: 0 20px;
+        line-height: 30px;
+        margin-right: 40px;
+        text-transform: uppercase;
+        border: 2px solid white;
+        margin-top: 30px;
+    }
+    .panelportfolioweb{
+        display: block;
+    }
+
+    .welcome{
+        padding: 90px 0px 0px 450px; /*in the order T R B L*/
+        font-size: 30px;
+        text-transform: uppercase;
+    }
+
+    .classone {
+        font-family: 'Castoro', serif;
+        font-size: 10px;
+        padding: 30px 150px 0px 200px;
+        min-height: 100px;
+        width: 300px;
+        margin: 7em auto;
+    }
+
+  .classone .level
+   {
+       font-size: 20px;
+      
+   }
+
+   .boxbutton
+   {
+    transition-duration: 0.3s;
+    border-radius: 10px;
+    line-height: 20px;
+    text-transform: uppercase;
+    font-family: 'Castoro', serif;
+   }
+
+}
+    
+   
+
+
+
+
