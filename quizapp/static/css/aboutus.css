@@ -32,9 +32,9 @@ html{
     z-index: -1;
   }
 
-  .static::backdrop {
+  /* .static::backdrop {
     background-image: url('picone.jpg');
-  }
+  } */
 
 
   .bg1::after {
