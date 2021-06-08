@@ -85,7 +85,7 @@ DATABASES = {
         'NAME': 'mywebsite',
         'USER': 'postgres',
         'PASSWORD': 'arvisro2023',
-        'HOST': 'localhost'
+        'ALLOWED_HOSTS': ['tecflow.herokuapp.com','localhost']
         ,
     }
 }
